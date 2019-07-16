@@ -1,0 +1,52 @@
+<div class="chat_window">
+  <div class="top_menu">
+      <div class="buttons">
+          <div class="button close">
+          </div>
+          <div class="button minimize">
+          </div>
+          <div class="button maximize">
+          </div>
+      </div>
+      <div class="title">Hello</div>
+  </div>
+  <ul class="messages">
+          <li class="message right appeared" *ngFor="let mes of messageList">
+                  <!-- <div [class.avatar-right]="avatarDirection" [class.avatar]="avatarDirection" style="text-align: center;">
+                    <div style="margin-top:20px;color: white;font-weight: 200;">WA</div>
+                  </div>
+                  <div class="text_wrapper">
+                      <div class="text">{{mes}}</div>
+                      <div style="float:right;">2:03pm</div>
+                  </div> -->
+                  <div>
+                      <hr >
+                      <p>{{ mes }}</p>
+                      <hr>
+                  </div>
+          </li>
+  </ul>
+  <div class="bottom_wrapper clearfix">
+      <div class="message_input_wrapper">
+          <input class="message_input" [(ngModel)]="messagetoSend" placeholder="Type your message here..." />
+      </div>
+      <div class="send_message" (click)="send(messagetoSend)">
+          <div class="icon">
+          </div>
+          <div class="text">Send</div>
+      </div>
+  </div>
+</div>
+<!-- <div class="message_template">
+  <li class="message">
+      <div class="avatar">
+      </div>
+      <div class="text_wrapper">
+          <div class="text">
+          </div>
+      </div>
+  </li>
+</div> 
+<!-- <p style="font-size:40px;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">{{guid}}</p>
+<button #button class="btn btn-success" (keydown.enter)="$event.KeyCode === 13 ? send(button.value):null">Key Event</button> -->
+

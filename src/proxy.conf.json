@@ -1,0 +1,7 @@
+{
+    "/api": {
+      "target": "http://51.145.9.114:3000/ChatServer",
+      "secure": false,
+      "changeOrigin" : true
+    }
+  }
